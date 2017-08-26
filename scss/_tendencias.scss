@@ -1,0 +1,237 @@
+.tendecias-home {
+    width: 100%;
+    height: 438px;
+    background-color: #F6F6F6;
+    position: relative;
+    .img-tendencias-home {
+        width: 50%;
+        height: 438px;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    .info-tendecias-home {
+        width: 50%;
+        height: 438px;
+        text-align: center;
+        float: left;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            z-index: 20;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        h3 {
+            font-weight: 40px;
+            color: #A08936;
+            text-transform: uppercase;
+            font-family: 'Gotham';
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            span {
+                display: inline-block;
+                border-top: 1px solid #AB9764;
+                border-bottom: 1px solid #AB9764;
+            }
+            @media screen and (max-width: 767px) {
+                color: #fff;
+                font-size: 30px;
+                text-shadow: 1px 1px 8px #000;
+                span {
+                    border-color: #fff;
+                    padding: 10px 0px;
+                }
+            }
+        }
+        .title1 {
+            font-size: 15px;
+            font-family: 'Adobe Caslon Pro';
+            font-style: italic;
+            margin-bottom: 35px;
+            margin-top: 100px;
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+        .title2 {
+            font-size: 20px;
+            margin: 0px;
+            font-family: 'Gotham';
+            font-weight: bold;
+            @media screen and (max-width: 767px) {
+                color: #fff;
+                font-size: 20px;
+                margin-top: 140px;
+                margin-bottom: 10px;
+                text-shadow: 1px 1px 8px #000;
+            }
+        }
+        .btn.btn-black {
+            background-color: #fff;
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.tendencias {
+    border: 1px solid #E4E4E4;
+    margin-bottom: 20px;
+    //general: se aplican en ambas caja-style
+    //general
+    .cont-tendencias {
+        padding: 50px 60px 20px 60px;
+        @media screen and (max-width: 767px) {
+            padding: 20px 18px 20px 18px;
+        }
+    }
+    //general 
+    .img-tendencias {
+        height: calc(100% - 20px);
+        width: 45%;
+        position: absolute;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        &:before{
+            content: " ";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+        &.img-left {
+            left: 6px;
+        }
+        &.img-right {
+            right: 6px;
+        }
+        @media screen and (max-width: 767px) {
+            height: 390px;
+            width: 100%;
+            padding: 10px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+    }
+    //general
+    .cont-header {
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        span {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 15px;
+            color: #969696;
+            @media screen and (max-width: 767px) {
+                order: 1;
+                width: 100%;
+            }
+            &.total-look {
+                color: #AE9B6A;
+            }
+            &.tendencias {
+                color: #575757;
+                border: none;
+                margin-bottom: 0px;
+            }
+        }
+        b {
+            font-weight: normal;
+            color: #969696;
+            @media screen and (max-width: 767px) {
+                order: 3;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            s {
+                color: #494949;
+                text-decoration: none;
+            }
+            &:before {
+                content: "| ";
+                @media screen and (max-width: 767px) {
+                    content: "";
+                }
+            }
+        }
+        h4 {
+            font-size: 28px;
+            font-family: 'Gotham Book';
+            font-weight: normal;
+            @media screen and (max-width: 767px) {
+                font-size: 20px;
+                margin-top: 5px;
+                order: 2;
+                width: 100%;
+            }
+        }
+    }
+    p {
+        color: #919092;
+        font-size: 14px;
+        font-family: 'Source Sans Pro', sans-serif;
+        a {
+            text-decoration: underline;
+            color: #AB9764;
+        }
+    }
+    .caja-style-1 {
+        position: inherit;
+        .cont-tendencias {
+            p {
+                margin-bottom: 45px;
+            }
+            .tendencias-mini {
+                .img-tendencias-mini {
+                    height: 200px;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    @media screen and (max-width: 767px) {
+                        height: 185px;
+                    }
+                }
+                span,
+                a {
+                    color: #383838;
+                }
+                span {
+                    font-family: 'Gotham Book';
+                    font-size: 12px;
+                }
+                a {
+                    font-family: 'Gotham Book';
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &.caja-style-2 {
+        min-height: 400px;
+        .img-tendencias {
+            width: 66.66666667%;
+            height: 400px;
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+}

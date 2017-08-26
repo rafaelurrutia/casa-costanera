@@ -1,0 +1,200 @@
+#galeria-thumbnail {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 0px;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+    transition: all .7s;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: #313131;
+    >div {
+        @media screen and (max-width: 767px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    &.open {
+        height: 100%;
+    }
+    .cerrar-modal {
+        position: absolute;
+        top: 60px;
+        right: 90px;
+        width: 26px;
+        height: 26px;
+        display: block;
+        background-image: url(../images/close-modal.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        @media screen and (max-width: 767px) {
+            top: 20px;
+            right: 20px;
+            width: 22px;
+            height: 22px;
+            background-size: 22px;
+        }
+    }
+    .titulo{
+        display: none;
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            display: block;
+            font-family: 'Gotham';
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.9;
+            color: #fcfcfc;
+            display: block;
+            width: calc(100% - 65px);
+        }
+    }
+    .galeria-redes {
+        display: inline-block;
+        width: 100%;
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+        a {
+            margin: 0 5px !important;
+        }
+    }
+    .flexslider {
+        margin: 10px 0;
+        background: transparent;
+        border: none;
+        position: relative;
+        zoom: 1;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+    }
+    .flexslider .flex-direction-nav a.flex-prev,
+    .flexslider .flex-direction-nav a.flex-next {
+        display: block;
+        opacity: 1;
+    }
+    .flexslider .flex-direction-nav a.flex-prev {
+        left: 0;
+    }
+    .flexslider .flex-direction-nav a.flex-next {
+        right: 0;
+    }
+    .flex-direction-nav {
+        .flex-nav-prev {
+            .flex-prev {
+                background-image: url(../images/gal-arrow-left.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 47px;
+                &:before {
+                    content: "";
+                }
+                &:hover {
+                    width: 47px;
+                    background-image: url(../images/gal-arrow-left-hover.png);
+                }
+            }
+        }
+        .flex-nav-next {
+            .flex-next {
+                background-image: url(../images/gal-arrow-right.png);
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 47px;
+                &:before {
+                    content: "";
+                }
+                &:hover {
+                    width: 47px;
+                    background-image: url(../images/gal-arrow-right-hover.png);
+                }
+            }
+        }
+    }
+    #slider {
+        margin-top: 100px;
+        @media screen and (max-width: 767px) {
+            margin-top: 50px;
+        }
+        .slides {
+            li {
+                text-align: center;
+                div {
+                    text-align: left;
+                    display: inline-block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @media screen and (max-width: 767px) {
+                        text-align: center;
+                        width: 100%;
+                        max-height: 355px;
+                    }
+                    span {
+                        font-family: 'Gotham';
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 1.9;
+                        color: #fcfcfc;
+                        &:nth-child(2) {
+                            float: right;
+                        }
+                        @media screen and (max-width: 767px) {
+                            &:first-of-type {
+                                display: none;
+                            }
+                            &:nth-child(2) {
+                                float: none;
+                            }
+                            &.galeria-img-total {
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+                img {
+                    width: auto;
+                    height: auto;
+                    max-height: 430px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        max-height: 355px;
+                    }
+                }
+            }
+        }
+    }
+    #carousel {
+        height: 120px;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        .slides {
+            li {
+                img {
+                    cursor: pointer;
+                    max-height: 115px;
+                }
+            }
+            li:not(.flex-active-slide) {
+                img {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

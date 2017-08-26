@@ -1,0 +1,32 @@
+h2.newsletter{
+	text-align: left;
+	font-size: 25px;
+	text-transform: none;
+	&:before{
+		display: none;
+	}
+	@media screen and (max-width: 767px) {
+		font-family: 'Gotham';
+		font-weight: bold;
+		font-size: 18px;
+	}
+}
+.formulario-newsletter{
+	p{
+		color: #797979;
+		font-size: 14px;
+		line-height: 2.2;
+	}
+	.btn-black{
+		margin-top: 30px;
+		font-family: 'Gotham Book';
+		font-size: 10px;
+		min-width: 230px;
+		@media screen and (max-width: 767px) {
+		    margin: 40px auto;
+		    float: initial;
+		    display: block;
+		    width: 250px;
+		}
+	}
+}
